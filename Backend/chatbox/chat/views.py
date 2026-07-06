@@ -10,15 +10,10 @@ from django.conf import settings
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.viewsets import ViewSet
-# import base64
-# import PyPDF2
-import os
 from google import genai
 from rest_framework.viewsets import ReadOnlyModelViewSet
-import time
 import os
 import time
-import mimetypes
 import subprocess
 from gtts import gTTS
 import uuid
