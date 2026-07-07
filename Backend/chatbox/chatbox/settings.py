@@ -26,7 +26,7 @@ load_dotenv(BASE_DIR / ".env")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://ai-chatbox-azrb.onrender.com"]
 
 
 # Application definition
@@ -93,7 +93,8 @@ MIDDLEWARE = [
 ]
 CORS_ALLOWED_ORIGINS = [
 
-    "http://localhost:5174",
+    "http://localhost:5174",  # Localhost URL
+    "https://ai-chatbox-1-asd7.onrender.com" ,# Frontend URL
 ]
 
 ROOT_URLCONF = 'chatbox.urls'
