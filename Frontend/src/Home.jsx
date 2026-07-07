@@ -27,7 +27,7 @@ const [audioChunks, setAudioChunks] = useState([]);
     try {
 
       const response = await fetch(
-  "http://127.0.0.1:8000/api/conversations/",
+  "https://ai-chatbox-azrb.onrender.com/api/conversations/",
   {
 
     headers: {
@@ -59,7 +59,7 @@ const [audioChunks, setAudioChunks] = useState([]);
 
     const response = await fetch(
 
-      `http://127.0.0.1:8000/api/messages/${conversation.id}/`,
+      `https://ai-chatbox-azrb.onrender.com/api/messages/${conversation.id}/`,
 
       {
         headers: {
@@ -290,7 +290,7 @@ if (selectedFile) {
 
     const response = await fetch(
 
-      "http://127.0.0.1:8000/api/chat/",
+      "https://ai-chatbox-azrb.onrender.com/api/chat/",
 
       {
 

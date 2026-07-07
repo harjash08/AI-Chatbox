@@ -36,7 +36,7 @@ const Login = () => {
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/token/",
+        "https://ai-chatbox-azrb.onrender.com/api/token/",
         {
           method: "POST",
 

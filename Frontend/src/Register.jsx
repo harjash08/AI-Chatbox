@@ -37,7 +37,7 @@ const Register = () => {
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/register/",
+        "https://ai-chatbox-azrb.onrender.com/api/register/",
         {
           method: "POST",
 
