@@ -5,14 +5,13 @@ from rest_framework_simplejwt.tokens import RefreshToken
 class Register(serializers.ModelSerializer):
     class Meta:
         model=User
-        fields=['username','password','email','profile_image','bio']
+        fields=['username','password','email']
     def create(self, validated_data):
         user=User.objects.create_user(
             username=validated_data['username'],
             password=validated_data['password'],
             email=validated_data.get('email'),
-            # profile_image=validated_data.get('profile_image'),
-            # bio=validated_data.get('bio')
+            
         )
         return user
     
