@@ -27,29 +27,24 @@ def home(request):
     return HttpResponse('hello')
 
 class Registerview(APIView):
-    # def post(self,request):
-    #     print("User:",request.user)
-    #     serializer=Register(data=request.data)
-    #     if serializer.is_valid():
-    #          serializer.save()
-    #          return Response(
-    #             {
-    #                 "message": "User Registered Successfully"
-    #             },
-    #             status=status.HTTP_201_CREATED
-    #         )
-    #     print("Serializer errors:",serializer.errors)
+    def post(self,request):
+        print("User:",request.user)
+        serializer=Register(data=request.data)
+        if serializer.is_valid():
+             serializer.save()
+             return Response(
+                {
+                    "message": "User Registered Successfully"
+                },
+                status=status.HTTP_201_CREATED
+            )
+        print("Serializer errors:",serializer.errors)
 
-    #     return Response(
-    #         serializer.errors,
-    #         status=status.HTTP_400_BAD_REQUEST
-    #     )
-    def post(self, request):
-        print("REGISTER VIEW HIT")
         return Response(
-            {"message": "Reached register view"},
-            status=200
+            serializer.errors,
+            status=status.HTTP_400_BAD_REQUEST
         )
+ 
 class Loginview(APIView):
      def post(self,request):
         serializer=Login(data=request.data)
