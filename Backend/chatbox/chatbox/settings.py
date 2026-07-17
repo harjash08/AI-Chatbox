@@ -26,7 +26,7 @@ load_dotenv(BASE_DIR / ".env")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["https://ai-chatbox-azrb.onrender.com"]
+ALLOWED_HOSTS = ["ai-chatbox-azrb.onrender.com"]
 
 
 # Application definition
