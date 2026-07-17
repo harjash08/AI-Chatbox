@@ -25,6 +25,7 @@ urlpatterns = [
     path("home/", home),
     path("register/",Registerview.as_view()),
     path('login/',Loginview.as_view()),
+    path("test-key/", test_key),
     path("messages/<int:conversation_id>/",MessageViewSet.as_view({"get": "list"})),
     path("", include(router.urls)),
 

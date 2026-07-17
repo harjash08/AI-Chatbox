@@ -17,6 +17,7 @@ import time
 import subprocess
 from gtts import gTTS
 import uuid
+from rest_framework.decorators import api_view
 print("GEMINI_API_KEY starts with:", settings.GEMINI_API_KEY[:10])
 
 client = genai.Client(
@@ -24,6 +25,11 @@ client = genai.Client(
 )
 
 # Create your views here.
+@api_view(["GET"])
+def test_key(request):
+    return Response({
+        "key_prefix": settings.GEMINI_API_KEY[:10]
+    })
 def home(request):
     return HttpResponse('hello')
 
