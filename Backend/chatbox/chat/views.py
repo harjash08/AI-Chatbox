@@ -17,6 +17,7 @@ import time
 import subprocess
 from gtts import gTTS
 import uuid
+print("GEMINI_API_KEY starts with:", os.getenv("GEMINI_API_KEY")[:10])
 
 client = genai.Client(
     api_key=settings.GEMINI_API_KEY,
